@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PokeRandom</title>
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+<section class="section">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-one-third box has-text-centered">
+            <h1 class="title poke-title">Hello Random Pokemon!</h1>
+            <div id="pokeDiv"></div>
+            <button class="button is-primary"
+                hx-get="/random"
+                hx-trigger="click"
+                hx-target="#pokeDiv"
+                hx-swap="innerHTML">
+                Random
+            </button>
+        </div>
+    </div>
+</section>
+</body>
+</html>
